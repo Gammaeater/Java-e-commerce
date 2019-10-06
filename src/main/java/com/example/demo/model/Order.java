@@ -17,7 +17,8 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonFormat(pattern = "dd/MM/yyyy") private LocalDate dateCreated;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate dateCreated;
 
     private String status;
 

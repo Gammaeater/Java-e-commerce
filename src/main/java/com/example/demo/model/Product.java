@@ -6,11 +6,12 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull (message = "Product name is required.")
+    @NotNull(message = "Product name is required.")
     @Basic(optional = false)
     private String name;
 
@@ -26,6 +27,7 @@ public class Product {
     }
 
     public Product() {
+        super();
     }
 
     public Long getId() {

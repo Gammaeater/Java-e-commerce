@@ -11,7 +11,12 @@ import javax.validation.constraints.NotNull;
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
-    // productService constructor injection
+
+    private ProductService productService;
+
+    public ProductController(ProductService productService) {
+        this.productService = productService;
+    }
 
     private ProductService productService;
 
