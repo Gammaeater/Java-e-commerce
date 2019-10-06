@@ -1,0 +1,123 @@
+Index: src/main/java/com/example/demo/exception/ResourceNotFoundException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/example/demo/exception/ResourceNotFoundException.java	(date 1570289934709)
++++ src/main/java/com/example/demo/exception/ResourceNotFoundException.java	(date 1570289934709)
+@@ -0,0 +1,22 @@
++package com.example.demo.exception;
++
++public class ResourceNotFoundException extends RuntimeException {
++
++    private static final long serialVersionUID = 5861310537366287163L;
++
++    public ResourceNotFoundException() {
++        super();
++    }
++
++    public ResourceNotFoundException(final String message, final Throwable cause) {
++        super(message, cause);
++    }
++
++    public ResourceNotFoundException(final String message) {
++        super(message);
++    }
++
++    public ResourceNotFoundException(final Throwable cause) {
++        super(cause);
++    }
++}
+Index: src/main/java/com/example/demo/exception/ApiExceptionHandler.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/example/demo/exception/ApiExceptionHandler.java	(revision 04faf94099bc17fa49298bdd87358891322a7993)
++++ src/main/java/com/example/demo/exception/ApiExceptionHandler.java	(date 1570289982290)
+@@ -1,5 +1,6 @@
+ package com.example.demo.exception;
+ 
++import com.fasterxml.jackson.annotation.JsonInclude;
+ import org.springframework.http.HttpStatus;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.web.bind.annotation.ExceptionHandler;
+@@ -7,23 +8,26 @@
+ 
+ import javax.validation.ConstraintViolation;
+ import javax.validation.ConstraintViolationException;
++import java.util.ArrayList;
++import java.util.List;
+ 
+ @RestControllerAdvice
+ public class ApiExceptionHandler {
+ 
+     @SuppressWarnings("rawtypes")
+     @ExceptionHandler(ConstraintViolationException.class)
+-    public ResponseEntity<ErrorResponse> handle(ConstraintViolationException e){
++    public ResponseEntity<ErrorResponse> handle(ConstraintViolationException e) {
+         ErrorResponse errors = new ErrorResponse();
+-        for (ConstraintViolation violation : e.getConstraintViolations()){
++        for (ConstraintViolation violation : e.getConstraintViolations()) {
+             ErrorItem error = new ErrorItem();
+             error.setCode(violation.getMessageTemplate());
+             error.setMessage(violation.getMessage());
+             errors.addError(error);
+-
+         }
++
+         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+     }
++
+     @SuppressWarnings("rawtypes")
+     @ExceptionHandler(ResourceNotFoundException.class)
+     public ResponseEntity<ErrorItem> handle(ResourceNotFoundException e) {
+@@ -32,5 +36,46 @@
+ 
+         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+     }
+-}
++
++    public static class ErrorItem {
++
++        @JsonInclude(JsonInclude.Include.NON_NULL) private String code;
++
++        private String message;
++
++        public String getCode() {
++            return code;
++        }
+ 
++        public void setCode(String code) {
++            this.code = code;
++        }
++
++        public String getMessage() {
++            return message;
++        }
++
++        public void setMessage(String message) {
++            this.message = message;
++        }
++
++    }
++
++    public static class ErrorResponse {
++
++        private List<ErrorItem> errors = new ArrayList<>();
++
++        public List<ErrorItem> getErrors() {
++            return errors;
++        }
++
++        public void setErrors(List<ErrorItem> errors) {
++            this.errors = errors;
++        }
++
++        public void addError(ErrorItem error) {
++            this.errors.add(error);
++        }
++
++    }
++}
+\ No newline at end of file
