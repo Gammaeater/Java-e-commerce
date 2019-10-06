@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class OrderProductServiceImpl {
+public class OrderProductServiceImpl  implements  OrderProductService{
 
     private OrderProductRepository orderProductRepository;
 
