@@ -1,8 +1,8 @@
 package com.example.demo.model;
 
-import com.sun.istack.NotNull;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Product {
@@ -10,7 +10,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull(message = "Product name is required.")
+    @NotNull (message = "Product name is required.")
     @Basic(optional = false)
     private String name;
 
