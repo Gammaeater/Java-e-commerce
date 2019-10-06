@@ -7,6 +7,7 @@ import { EcommerceComponent } from './ecommerce/ecommerce.component';
 import { ProductsComponent } from './ecommerce/ecommerce/components/products/products.component';
 import { OrdersComponent } from './ecommerce/ecommerce/components/orders/orders.component';
 import { ShoppingCartComponent } from './ecommerce/ecommerce/components/shopping-cart/shopping-cart.component';
+import { HeroComponent } from './ecommerce/ecommerce/components/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ShoppingCartComponent } from './ecommerce/ecommerce/components/shopping
     EcommerceComponent,
     ProductsComponent,
     OrdersComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
