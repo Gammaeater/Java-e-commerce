@@ -14,6 +14,7 @@ import java.util.List;
 @RestControllerAdvice
 public class ApiExceptionHandler {
 
+
     @SuppressWarnings("rawtypes")
     @ExceptionHandler(ConstraintViolationException.class)
     public ResponseEntity<ErrorResponse> handle(ConstraintViolationException e) {
