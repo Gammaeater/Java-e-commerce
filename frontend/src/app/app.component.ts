@@ -11,32 +11,32 @@ import{OrdersComponent} from "./frontend/components/orders/orders.component";
 export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
-  title = 'frontend';
-  private collapsed = true;
-  orderFinished = false;
-
-  @ViewChild('productsC')
-  productsC: ProductComponent;
-
-  @ViewChild('shoppingCartC')
-  shoppingCartC: ShoppingCartComponent;
-
-  @ViewChild('ordersC')
-  ordersC: OrdersComponent;
-
-  toggleCollapsed(): void {
-    this.collapsed = !this.collapsed;
-  }
-
-  finishOrder(orderFinished: boolean) {
-    this.orderFinished = orderFinished;
-  }
-
-  reset() {
-    // this.orderFinished = false;
-    // this.productsC.reset();
-    // this.shoppingCartC.reset();
-    // this.ordersC.paid = false;
-  }
+  // title = 'frontend';
+  // private collapsed = true;
+  // orderFinished = false;
+  //
+  // @ViewChild('productsC')
+  // productsC: ProductComponent;
+  //
+  // @ViewChild('shoppingCartC')
+  // shoppingCartC: ShoppingCartComponent;
+  //
+  // @ViewChild('ordersC')
+  // ordersC: OrdersComponent;
+  //
+  // toggleCollapsed(): void {
+  //   this.collapsed = !this.collapsed;
+  // }
+  //
+  // finishOrder(orderFinished: boolean) {
+  //   this.orderFinished = orderFinished;
+  // }
+  //
+  // reset() {
+  //   this.orderFinished = false;
+  //   this.productsC.reset();
+  //   this.shoppingCartC.reset();
+  //   this.ordersC.paid = false;
+  // }
 }
 

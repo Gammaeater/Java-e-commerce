@@ -11,8 +11,8 @@ import { ShoppingCartComponent } from './frontend/components/shopping-cart/shopp
 import {HeroComponent} from "./frontend/components/hero/hero.component";
 import {ProductListComponent} from "./backend/components/product-list/product-list.component";
 import {CardModule} from "primeng/card";
-import {HttpClientModule} from "@angular/common/http";
-
+import {MenubarModule} from "primeng/menubar";
+import {ButtonModule} from "primeng/button";
 
 @NgModule({
   declarations: [
@@ -22,14 +22,14 @@ import {HttpClientModule} from "@angular/common/http";
     OrdersComponent,
     ShoppingCartComponent,
     HeroComponent,
-    ProductListComponent,
-
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CardModule,
-    HttpClientModule
+    MenubarModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

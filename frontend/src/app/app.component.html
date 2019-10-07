@@ -1,46 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
-<div class="container">
+<div>
   <app-nav-bar></app-nav-bar>
+  <app-hero></app-hero>
+<!--<app-product-list></app-product-list>-->
 
-
-  <div class="row">
-    <div class="col-md-9">
-      <app-products #productsC [hidden]="orderFinished"></app-products>
-    </div>
-    <div class="col-md-3">
-      <app-shopping-cart (onOrderFinished)=finishOrder($event) #shoppingCartC
-                         [hidden]="orderFinished"></app-shopping-cart>
-    </div>
-    <div class="col-md-6 offset-3">
-      <app-orders #ordersC [hidden]="!orderFinished"></app-orders>
-    </div>
-  </div>
-
-  <app-product-list></app-product-list>
+  <!--<div class="row">-->
+    <!--<div class="col-md-9">-->
+      <!--<app-products #productsC [hidden]="orderFinished"></app-products>-->
+    <!--</div>-->
+    <!--<div class="col-md-3">-->
+      <!--<app-shopping-cart (onOrderFinished)=finishOrder($event) #shoppingCartC-->
+                         <!--[hidden]="orderFinished"></app-shopping-cart>-->
+    <!--</div>-->
+    <!--<div class="col-md-6 offset-3">-->
+      <!--<app-orders #ordersC [hidden]="!orderFinished"></app-orders>-->
+    <!--</div>-->
+  <!--</div>-->
 
 </div>
-
-<table class="table table-trapped">
-
-  <thead>
-  <tr>
-    <th>Id:</th>
-    <th>Name:</th>
-    <th>Price:</th>
-
-  </tr>
-  </thead>
-
-  <tbody>
-  <tr *ngFor="let data of productName">
-    <td>{{data.id}}</td>
-    <td>{{data.name}}</td>
-    <td>{{data.price}}</td>
-
-  </tr>
-  </tbody>
-
-</table>
 
 <router-outlet></router-outlet>
