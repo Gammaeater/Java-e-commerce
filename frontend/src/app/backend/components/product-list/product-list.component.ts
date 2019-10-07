@@ -5,6 +5,7 @@ import {Product} from "../../model/Product";
 import { Subscription } from 'rxjs';
 
 
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -13,8 +14,6 @@ import { Subscription } from 'rxjs';
 export class ProductListComponent implements OnInit {
   productList: Product[];
   subscriptions = new Subscription();
-
-
 
   constructor(private dataservice: ProductService) {
     console.log()
