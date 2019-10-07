@@ -16,10 +16,14 @@ export class ProductListComponent implements OnInit {
   subscriptions = new Subscription();
 
   constructor(private dataservice: ProductService) {
-    console.log()
   }
 
   ngOnInit() {
+    this.subscriptions.add(this.dataservice.getProductList().subscribe(
+      (data) => {
+        this.productList = data;
+      }
+    ))
   }
 
 }
