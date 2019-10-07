@@ -10,6 +10,9 @@ import { OrdersComponent } from './frontend/components/orders/orders.component';
 import { ShoppingCartComponent } from './frontend/components/shopping-cart/shopping-cart.component';
 import {HeroComponent} from "./frontend/components/hero/hero.component";
 import {ProductListComponent} from "./backend/components/product-list/product-list.component";
+import {CardModule} from "primeng/card";
+import {HttpClientModule} from "@angular/common/http";
+
 
 @NgModule({
   declarations: [
@@ -19,11 +22,14 @@ import {ProductListComponent} from "./backend/components/product-list/product-li
     OrdersComponent,
     ShoppingCartComponent,
     HeroComponent,
-    ProductListComponent
+    ProductListComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

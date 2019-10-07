@@ -1,8 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
 <div class="container">
   <app-nav-bar></app-nav-bar>
-  <app-hero></app-hero>
-  zcvxv
+
 
   <div class="row">
     <div class="col-md-9">
@@ -17,6 +17,30 @@
     </div>
   </div>
 
+  <app-product-list></app-product-list>
+
 </div>
+
+<table class="table table-trapped">
+
+  <thead>
+  <tr>
+    <th>Id:</th>
+    <th>Name:</th>
+    <th>Price:</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let data of productName">
+    <td>{{data.id}}</td>
+    <td>{{data.name}}</td>
+    <td>{{data.price}}</td>
+
+  </tr>
+  </tbody>
+
+</table>
 
 <router-outlet></router-outlet>
