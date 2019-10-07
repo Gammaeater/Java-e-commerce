@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import{ProductsComponent} from "./frontend/components/products/products.component";
+import{ProductComponent} from "./frontend/components/product/product.component";
 import{ShoppingCartComponent} from "./frontend/components/shopping-cart/shopping-cart.component";
 import{OrdersComponent} from "./frontend/components/orders/orders.component";
 
@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   orderFinished = false;
 
   @ViewChild('productsC')
-  productsC: ProductsComponent;
+  productsC: ProductComponent;
 
   @ViewChild('shoppingCartC')
   shoppingCartC: ShoppingCartComponent;
