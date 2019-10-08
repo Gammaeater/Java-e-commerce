@@ -38,7 +38,7 @@ export class ProductService {
   }
 
   saveOrder(order: ProductOrders) {
-    return this.httpClient.post<>(environment.api.order.orderList, order);
+    return this.httpClient.post<ProductOrder[]>(environment.api.order.orderList, order);
   }
 
   set SelectedProductOrder(value: ProductOrder) {
