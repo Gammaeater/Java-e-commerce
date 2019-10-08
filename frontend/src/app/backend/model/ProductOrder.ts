@@ -1,8 +1,9 @@
 import {Product} from "./Product";
 
-export interface ProductOrder {
-  product: Product;
+export class ProductOrder {
   quantity: number;
+  product: Product;
+
 
   // all arguments constructor
 }

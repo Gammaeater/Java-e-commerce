@@ -8,3 +8,11 @@ body {
   font-family: 'Poppins', sans-serif !important;
   font-weight: 200;
 }
+
+.main-button {
+  background: #4CAF50 !important;
+  border: none;
+  width: 150px;
+  height: 45px;
+  border-radius: 50%;
+}
