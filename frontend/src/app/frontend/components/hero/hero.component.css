@@ -12,7 +12,7 @@ section {
 section:nth-of-type(2) {
   background: #ffffff;
   z-index: 5;
-  position: absolute;
+
 }
 
 .header-text-container {

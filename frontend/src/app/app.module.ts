@@ -13,6 +13,8 @@ import {ProductListComponent} from "./frontend/components/product-list/product-l
 import {CardModule} from "primeng/card";
 import {MenubarModule} from "primeng/menubar";
 import {ButtonModule} from "primeng/button";
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {ButtonModule} from "primeng/button";
     AppRoutingModule,
     CardModule,
     MenubarModule,
-    ButtonModule
+    ButtonModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
