@@ -1,40 +1,72 @@
 {
-  "productName": [
-    {
-      "id": 1,
-      "name": "CanabisSativa",
-      "price": 5.99,
-      "pictureUrl": "../../../assets/img/55.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Jack Harrer",
-      "price": 17.29,
-      "pictureUrl": "../../../assets/img/cbd-jar-mockup.01.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Japan-Afgan",
-      "price": 40.00,
-      "pictureUrl": "../../../assets/img/botany-pt1.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Green Shitr",
-      "price": 599.20,
-      "pictureUrl": "../../../assets/img/lr1.jpg"
-    },
-    {
-      "id": 5,
-      "name": "White Widow",
-      "price": 1.78,
-      "pictureUrl": "../../../assets/img/render-8.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Amnesia",
-      "price": 117.29,
-      "pictureUrl": "../../../assets/img/cbd-jar-mockup.01.jpg"
-    }
-  ]
+  "api": {
+    "productList": [
+      {
+        "id": 1,
+        "name": "CanabisSativa",
+        "price": 5.99,
+        "pictureUrl": "../../../assets/img/55.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Jack Harrer",
+        "price": 17.29,
+        "pictureUrl": "../../../assets/img/cbd-jar-mockup.01.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Japan-Afgan",
+        "price": 40.00,
+        "pictureUrl": "../../../assets/img/botany-pt1.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Green Shitr",
+        "price": 599.20,
+        "pictureUrl": "../../../assets/img/lr1.jpg"
+      },
+      {
+        "id": 5,
+        "name": "White Widow",
+        "price": 1.78,
+        "pictureUrl": "../../../assets/img/render-8.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Amnesia",
+        "price": 117.29,
+        "pictureUrl": "../../../assets/img/cbd-jar-mockup.01.jpg"
+      }
+    ],
+    "orderList": [
+      {
+        "quantity": "1",
+        "product": {
+          "id": 1,
+          "name": "CanabisSativa",
+          "price": 5.99,
+          "pictureUrl": "../../../assets/img/55.jpg"
+        }
+      },
+      {
+        "quantity": "1",
+        "product": {
+          "id": 1,
+          "name": "CanabisSativa",
+          "price": 5.99,
+          "pictureUrl": "../../../assets/img/55.jpg"
+        }
+      },
+      {
+        "quantity": "1",
+        "product": {
+          "id": 1,
+          "name": "CanabisSativa",
+          "price": 5.99,
+          "pictureUrl": "../../../assets/img/55.jpg"
+        }
+      }
+
+    ]
+  }
 }
