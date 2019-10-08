@@ -9,7 +9,7 @@ import { ProductComponent } from './frontend/components/product/product.componen
 import { OrdersComponent } from './frontend/components/orders/orders.component';
 import { ShoppingCartComponent } from './frontend/components/shopping-cart/shopping-cart.component';
 import {HeroComponent} from "./frontend/components/hero/hero.component";
-import {ProductListComponent} from "./backend/components/product-list/product-list.component";
+import {ProductListComponent} from "./frontend/components/product-list/product-list.component";
 import {CardModule} from "primeng/card";
 import {MenubarModule} from "primeng/menubar";
 import {ButtonModule} from "primeng/button";
@@ -22,7 +22,8 @@ import {ButtonModule} from "primeng/button";
     OrdersComponent,
     ShoppingCartComponent,
     HeroComponent,
-    ProductListComponent
+    ProductListComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 import {Component, OnInit, EventEmitter, Output} from '@angular/core';
-import {ProductOrders} from "../../../backend/model/ProductOrders";
+import {ProductOrders} from "../model/ProductOrders";
 import {Subscription} from "rxjs/internal/Subscription";
-import {ProductService} from "../../../backend/services/product.service";
-import {ProductOrder} from "../../../backend/model/ProductOrder";
+import {ProductService} from "../services/product.service";
+import {ProductOrder} from "../model/ProductOrder";
 
 @Component({
   selector: 'app-shopping-cart',

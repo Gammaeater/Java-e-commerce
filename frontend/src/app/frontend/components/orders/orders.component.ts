@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductOrders} from "../../../backend/model/ProductOrders";
-import {ProductService} from "../../../backend/services/product.service";
+import {ProductOrders} from "../model/ProductOrders";
+import {ProductService} from "../services/product.service";
 import {Subscription} from "rxjs/internal/Subscription";
 
 @Component({

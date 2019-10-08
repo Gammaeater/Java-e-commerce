@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Product} from "../model/Product";
-import {environment} from "../../../environments/environment";
+import {environment} from "../../../../environments/environment";
 import {ProductOrders} from "../model/ProductOrders";
 import {ProductOrder} from "../model/ProductOrder";
 import {Subject} from "rxjs";
@@ -40,14 +40,6 @@ export class ProductService {
   saveOrder(order: ProductOrders) {
     return this.httpClient.post<>(environment.api.order.orderList, order);
   }
-
-  // getAllProducts() {
-  //   return this.http.get(this.productsUrl);
-  // }
-
-  // saveOrder(order: ProductOrders) {
-  //   return this.http.post(this.ordersUrl, order);
-  // }
 
   set SelectedProductOrder(value: ProductOrder) {
     this.productOrder = value;
