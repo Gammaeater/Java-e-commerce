@@ -18,11 +18,6 @@ public class ProductController {
         this.productService = productService;
     }
 
-    private ProductService productService;
-
-    public ProductController(ProductService productService){
-        this.productService = productService;
-    }
 
 
 
